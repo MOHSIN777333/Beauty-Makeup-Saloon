@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0A0908;
+  --color-charcoal: #141211;
+  --color-surface: #1C1917;
+  --color-gold-300: #E8CB84;
+  --color-gold-500: #C9A24B;
+  --color-gold-700: #8F7230;
+  --color-ivory: #F6EFE2;
+  --color-muted: #A89F8D;
+  --color-blush: #D9A5A0;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Jost", system-ui, -apple-system, sans-serif;
+  --font-script: "Pinyon Script", cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-ink);
+    color: var(--color-ivory);
+    overscroll-behavior-y: contain;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+    background-color: var(--color-ink);
+    color: var(--color-ivory);
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold-300);
+    outline-offset: 3px;
+  }
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #E8CB84 0%, #C9A24B 52%, #8F7230 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #E8CB84 0%, #C9A24B 58%, #A88438 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

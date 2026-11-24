@@ -1,0 +1,6 @@
+{
+  "name": "Maheen's Beauty & Makeup Saloon",
+  "description": "Luxury bridal makeup, hair care, skin rituals, and beauty sanctuary in Latifabad, Hyderabad. Book appointments directly on WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
